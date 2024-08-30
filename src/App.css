@@ -1,38 +1,223 @@
-.App {
+:root {
+  --background-color: #dda7b5;
+  --text-color: #9c5865;
+  --heading-font: "Dancing Script", cursive;
+  --body-font: Arial, sans-serif;
+  --font-weight-normal: 400; /* Peso da fonte normal */
+  --font-weight-bold: 700; /* Peso da fonte negrito */
+  --font-size-normal: 1em; /* Tamanho da fonte padrão */
+  --font-size-heading: 1.5em; /* Tamanho da fonte dos cabeçalhos */
+  --letter-spacing-normal: 0.05em; /* Espaçamento entre letras padrão */
+}
+
+body {
+  margin: 0;
+  font-family: var(--body-font);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.header,
+.footer {
   text-align: center;
+  padding: 20px;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-content {
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-content section {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1,
+h2,
+h3 {
+  color: var(--text-color);
+  letter-spacing: var(--letter-spacing-normal); /* Espaçamento entre letras */
+}
+
+h2,
+h3 {
+  font-family: var(--heading-font); /* Fonte para h2 */
+  font-size: var(--font-size-heading); /* Tamanho da fonte dos cabeçalhos */
+  font-weight: var(--font-weight-bold); /* Peso da fonte negrito para h2 */
+}
+
+p {
+  font-size: var(--font-size-normal); /* Tamanho da fonte padrão */
+  line-height: 1.6; /* Altura da linha para legibilidade */
+  letter-spacing: var(--letter-spacing-normal); /* Espaçamento entre letras */
+}
+
+/* Estilo para a seção de Furo Humanizado */
+#furo-humanizado-intro {
+  width: 70vw; /* Largura para 70% da viewport width */
+  padding: 20px;
+  background-color: #f9f9f9; /* Cor de fundo clara para contraste */
+  border-radius: 8px; /* Cantos arredondados */
+  margin: 30px auto; /* Margem vertical e centralizar horizontalmente */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+#furo-humanizado-intro h2 {
+  color: #c5647e; /* Cor do título */
+  font-size: var(--font-size-heading); /* Tamanho da fonte */
+  font-family: var(--heading-font); /* Aplicar a fonte Dancing Script aos h2 */
+}
+
+#furo-humanizado-intro p {
+  color: #333; /* Cor do texto */
+  font-size: var(--font-size-normal); /* Tamanho da fonte */
+  line-height: 1.6; /* Altura da linha para legibilidade */
+  letter-spacing: var(--letter-spacing-normal); /* Espaçamento entre letras */
+}
+
+/* Estilo para a seção Quem Sou */
+#quem-sou {
+  width: 70vw; /* Largura para 70% da viewport width */
+  padding: 20px;
+  background-color: #f9f9f9; /* Cor de fundo clara para contraste */
+  border-radius: 8px; /* Cantos arredondados */
+  margin: 30px auto; /* Margem vertical e centralizar horizontalmente */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+#quem-sou h2 {
+  color: #c5647e;
+}
+
+.profile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.profile-photo {
+  width: 250px; /* Largura da foto */
+  height: 250px; /* Altura da foto */
+  border-radius: 50%; /* Tornar a foto circular */
+  object-fit: cover; /* Ajustar a foto para cobrir o espaço */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.profile-text p {
+  color: #333; /* Cor do texto */
+  font-size: var(--font-size-normal); /* Tamanho da fonte */
+  line-height: 1.6; /* Altura da linha para legibilidade */
+  letter-spacing: var(--letter-spacing-normal); /* Espaçamento entre letras */
+}
+
+.furo-humanizado {
+  width: 70vw; /* Largura para 70% da viewport width */
+  padding: 20px;
+  background-color: #f9f9f9; /* Cor de fundo clara para contraste */
+  border-radius: 8px; /* Cantos arredondados */
+  margin: 30px auto; /* Margem vertical e centralizar horizontalmente */
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  text-align: center;
+}
+.furo-humanizado h2,
+h3 {
+  color: #c5647e;
+}
+
+.material {
+  width: 70vw; /* Largura para 70% da viewport width */
+  padding: 20px;
+  background-color: #f9f9f9; /* Cor de fundo clara para contraste */
+  border-radius: 8px; /* Cantos arredondados */
+  margin: 30px auto; /* Margem vertical e centralizar horizontalmente */
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  text-align: center;
+}
+
+.material-gallery {
+  display: flex;
+}
+
+.material-item {
+  flex: 1;
+  min-width: 250px;
+  max-width: 30%;
+  text-align: center;
+}
+
+.material-item img {
+  height: 20vh;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.material-item p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.galeriaPrincesas {
+  width: 70vw; /* Largura para 70% da viewport width */
+  padding: 20px;
+  background-color: #ffffff; /* Cor de fundo clara para contraste */
+  border-radius: 8px; /* Cantos arredondados */
+  margin: 30px auto; /* Margem vertical e centralizar horizontalmente */
+  display: flex;
+  flex-direction: column;
+  color: #333;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .main-content section {
+    flex: 1;
+    margin: 0 10px;
+  }
+
+  #quem-sou {
+    flex-direction: row; /* Exibir imagem e texto lado a lado em telas maiores */
+    text-align: left;
+    justify-content: center;
+  }
+
+  .profile {
+    flex-direction: row; /* Imagem e texto lado a lado */
+    align-items: center; /* Alinhar itens no topo */
+  }
+
+  .profile-text {
+    margin-left: 20px; /* Espaço entre imagem e texto */
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .main-content section {
+    margin-bottom: 15px;
   }
 }

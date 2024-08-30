@@ -1,0 +1,75 @@
+/* Navbar.css */
+.navbar {
+  background-color: #c5647e; /* Cor de fundo */
+  padding: 10px;
+  position: relative;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff; /* Cor das linhas */
+  transition: background-color 0.3s ease;
+}
+
+.navbar-list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item a {
+  color: #9c5865; /* Cor do texto */
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.navbar-item a:hover {
+  background-color: #9c5865; /* Muda a cor de fundo ao passar o mouse */
+  color: #fff; /* Muda a cor do texto ao passar o mouse */
+  border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-list {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #dda7b5;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .navbar-list.open {
+    max-height: 300px; /* Expande o menu quando aberto */
+  }
+
+  .navbar-item a {
+    padding: 15px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
